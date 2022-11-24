@@ -1,4 +1,4 @@
-### Questions
+# Questions
 
 #### A. Customer Journey
 1. Based off the 8 sample customers provided in the sample from the subscriptions table, write a brief description about each customer’s onboarding journey.
