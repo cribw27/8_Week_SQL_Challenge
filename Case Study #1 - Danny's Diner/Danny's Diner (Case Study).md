@@ -23,7 +23,7 @@ You can inspect the entity relationship diagram and example data below.
 
 <img width="562" alt="Screenshot 2022-11-24 at 12 13 15" src="https://user-images.githubusercontent.com/77234974/203782990-c188569c-71b8-4bcc-8dc9-fe0823730f45.png">
 
-### Questions to answer:
+#### Questions to answer:
 
 1. What is the total amount each customer spent at the restaurant?
 2. How many days has each customer visited the restaurant?
@@ -35,3 +35,7 @@ You can inspect the entity relationship diagram and example data below.
 8. What is the total items and amount spent for each member before they became a member?
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 20. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+#### Bonus Question
+
+1. Danny also requires further information about the ranking of customer products, but he purposely does not need the ranking for non-member purchases so he expects null ranking values for the records when customers are not yet part of the loyalty program.
