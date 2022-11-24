@@ -1,4 +1,4 @@
-# Questions
+# Answers - Case Study #4 - Data Bank
 
 #### A. Customer Nodes Exploration
 1. How many unique nodes are there on the Data Bank system?
