@@ -2,6 +2,19 @@
 
 #### 1. What is the total amount each customer spent at the restaurant?
 
+```sql
+SELECT
+  s.customer_id,
+  SUM(m.price) AS total_spend
+FROM
+  dannys_diner.sales AS s
+INNER JOIN dannys_diner.menu AS m 
+ON m.product_id = s.product_id
+GROUP BY
+  1
+ORDER BY
+  1;
+```
 #### 2.How many days has each customer visited the restaurant?
 
 #### 3.What was the first item from the menu purchased by each customer?
