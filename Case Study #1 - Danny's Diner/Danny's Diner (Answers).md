@@ -59,7 +59,6 @@ INNER JOIN dannys_diner.menu AS m
 GROUP BY 1
 ORDER BY 1;
 ```
-[image]
 
 #### 2.How many days has each customer visited the restaurant?
 
@@ -70,7 +69,6 @@ SELECT
 FROM dannys_diner.sales
 GROUP BY customer_id;
 ```
-[image]
 
 #### 3.What was the first item from the menu purchased by each customer?
 
@@ -93,7 +91,6 @@ JOIN min_order_dates
     AND s.order_date = min_order_dates.min_order_date
 ORDER BY s.customer_id;
 ```
-[image]
 
 #### 4.What is the most purchased item on the menu and how many times was it purchased by all customers?
 
