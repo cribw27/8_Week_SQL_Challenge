@@ -27,7 +27,6 @@ INSERT INTO sales (customer_id, order_date, product_id) VALUES
   ('C', '2021-01-01', 3),
   ('C', '2021-01-07', 3);
 
-
 CREATE TABLE menu (
   product_id INTEGER NOT NULL,
   product_name VARCHAR(5) NOT NULL,
@@ -60,6 +59,8 @@ INNER JOIN dannys_diner.menu AS m
 GROUP BY 1
 ORDER BY 1;
 ```
+
+[View on DB Fiddle](https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/5288)
 #### 2.How many days has each customer visited the restaurant?
 
 #### 3.What was the first item from the menu purchased by each customer?
