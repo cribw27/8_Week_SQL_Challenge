@@ -4,16 +4,13 @@
 
 ```sql
 SELECT
-  s.customer_id,
-  SUM(m.price) AS total_spend
-FROM
-  dannys_diner.sales AS s
+  s.customer_id
+  , SUM(m.price) AS total_spend
+FROM dannys_diner.sales AS s
 INNER JOIN dannys_diner.menu AS m 
-ON m.product_id = s.product_id
-GROUP BY
-  1
-ORDER BY
-  1;
+  ON m.product_id = s.product_id
+GROUP BY 1
+ORDER BY 1;
 ```
 #### 2.How many days has each customer visited the restaurant?
 
