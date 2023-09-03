@@ -59,22 +59,66 @@ INNER JOIN dannys_diner.menu AS m
 GROUP BY 1
 ORDER BY 1;
 ```
+[image]
 
-[View on DB Fiddle](https://www.db-fiddle.com/f/2rM8RAnq7h5LLDTzZiRWcd/5288)
 #### 2.How many days has each customer visited the restaurant?
+
+```sql
+SELECT
+  customer_id
+  , COUNT(DISTINCT order_date) AS number_of_visits
+FROM dannys_diner.sales
+GROUP BY customer_id;
+```
+[image]
 
 #### 3.What was the first item from the menu purchased by each customer?
 
+```sql
+WITH min_order_date AS (
+  SELECT
+    customer_id
+    , MIN(order_date) AS min_order_date
+  FROM dannys_diner.sales
+  GROUP BY 1
+)
+
+SELECT
+  DISTINCT s.customer_id
+  , m.product_name
+FROM dannys_diner.sales s
+JOIN dannys_diner.menu m ON m.product_id = s.product_id
+JOIN min_order_dates
+	ON s.customer_id = min_order_dates.customer_id 
+    AND s.order_date = min_order_dates.min_order_date
+ORDER BY s.customer_id;
+```
+[image]
+
 #### 4.What is the most purchased item on the menu and how many times was it purchased by all customers?
+
+```sql
 
 #### 5.Which item was the most popular for each customer?
 
+```sql
+
 #### 6.Which item was purchased first by the customer after they became a member?
+
+```sql
 
 #### 7.Which item was purchased just before the customer became a member?
 
+```sql
+
 #### 8.What is the total items and amount spent for each member before they became a member?
+
+```sql
 
 #### 9.If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 
+```sql
+
 #### 10.In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
+
+```sql
